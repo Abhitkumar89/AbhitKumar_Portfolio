@@ -140,7 +140,7 @@ export default function Contact() {
 
           {status === "success" ? (
             <div className="flex items-center justify-center gap-2 rounded-xl bg-accent-lime/15 px-4 py-3 font-medium text-accent-lime">
-              <CheckCircle2 size={18} /> Message sent — thank you!
+              <CheckCircle2 size={18} /> Message sent, thank you!
             </div>
           ) : (
             <MagneticButton

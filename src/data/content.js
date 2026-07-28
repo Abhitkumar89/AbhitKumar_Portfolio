@@ -19,7 +19,7 @@ export const profile = {
   email: "krabhit910@gmail.com",
   // Used by the resume download button -> place your file at public/resume.pdf
   resumeUrl:
-    "https://drive.google.com/file/d/1pjMgjfK5OMbRSUtlf7vDxpDpS3mO1FdG/view?usp=drive_link",
+    "https://drive.google.com/file/d/1Irsxi8y05WxbElMyfPLsCTAmqlqihelF/view?usp=drive_link",
   // Short intro shown in the hero, can include a couple of sentences.
   intro:
     "Developer who turns ambitious ideas into polished products. I care about clean architecture, buttery interactions, and shipping things people love to use.",
@@ -43,9 +43,9 @@ export const navLinks = [
 export const about = {
   heading: "About me",
   paragraphs: [
-    "I'm a software developer who enjoys building reliable, end-to-end products — from clean user interfaces to the APIs, databases, and automation that keep them running.",
+    "I'm a software developer who enjoys building reliable, end-to-end products, from clean user interfaces to the APIs, databases, and automation that keep them running.",
     "My toolkit spans C++, Python, and JavaScript/TypeScript with React and Node on top. I care about clean architecture, solid data design, and the small details that make software feel fast and dependable.",
-    "Whether it's building responsive front-ends, designing RESTful back-end services and databases, or automating delivery with CI/CD pipelines, I like owning a feature end-to-end — from first commit to production.",
+    "Whether it's building responsive front-ends, designing RESTful back-end services and databases, or automating delivery with CI/CD pipelines, I like owning a feature end-to-end, from first commit to production.",
   ],
   highlights: [
     "Pixel-perfect, accessible interfaces",
@@ -59,8 +59,8 @@ export const education = [
   {
     degree: "B.Tech in Information Technology",
     school: "Delhi Technological University",
-    period: "2022 — 2026",
-    grade: "CGPA: 8.034 / 10",
+    period: "2022 - 2026",
+    grade: "CGPA: 7.98 / 10",
     description:
       "Specialized in software engineering and web technologies. Built several full-stack projects and explored DSA, DBMS, and systems.",
     tags: ["DSA", "DBMS", "Web Dev", "OOP"],
@@ -68,7 +68,7 @@ export const education = [
   {
     degree: "Senior Secondary (Class XII)",
     school: "S B Mills Senior Secondary School",
-    period: "2020 — 2021",
+    period: "2020 - 2021",
     grade: "Percentage: 94%",
     description:
       "Science stream (PCM) with Computer Science. Built my first websites and discovered a love for programming.",
@@ -77,7 +77,7 @@ export const education = [
   {
     degree: "Secondary School (Class X)",
     school: "S B Mills Senior Secondary School",
-    period: "2018 — 2019",
+    period: "2018 - 2019",
     grade: "Percentage: 89.8%",
     description:
       "Built a strong foundation in maths and science, and wrote my very first lines of code in the school computer lab.",
@@ -139,13 +139,33 @@ export const skillGroups = [
 
 export const projects = [
   {
-    title: "FastBlog — AI-Powered Blogging",
+    title: "FastBlog - AI-Powered Blogging",
     description:
       "An AI-powered blogging platform that offers personalized content recommendations and a sleek user interface. Writers can draft, refine, and publish posts faster with smart AI assistance built right in.",
     tags: ["React", "Node.js", "MongoDB", "AI"],
     accent: "violet",
     featured: true,
     links: { live: "https://fast-blog-gray.vercel.app/", code: "https://github.com/Abhitkumar89/FastBlog" },
+  },
+  {
+    title: "Sorting Visualizer",
+    description:
+      "A learning-focused web app that animates sorting, searching, and graph algorithms in real time. Users can play, pause, and adjust speed for algorithms like Quick Sort, Binary Search, BFS, and Dijkstra. Built with React, Vite, Tailwind CSS, and JavaScript, it includes multi-language code references and complexity analysis. An optional C++ backend generates animation steps, with a JavaScript fallback when it’s offline.",
+    tags: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "C++",
+      "CMake",
+    ],
+    accent: "violet",
+    featured: true,
+    links: {
+      live: "https://sorting-visualizer-sand-eta.vercel.app/",
+      code: "https://github.com/Abhitkumar89/Sorting_Visualizer",
+    },
   },
   {
     title: "Study-Notion",
@@ -157,7 +177,7 @@ export const projects = [
     links: { live: "https://study-notion-frontend-sigma-five.vercel.app/", code: "https://github.com/Abhitkumar89/Study-Notion" },
   },
   {
-    title: "MoveOn — The Ride Sharing",
+    title: "MoveOn - The Ride Sharing",
     description:
       "A full-stack ride-sharing app like Uber with live tracking, real-time updates, JWT auth, and smooth animations.",
     tags: ["React", "Node.js", "Socket.IO", "JWT"],
@@ -192,17 +212,47 @@ export const projects = [
     featured: false,
     links: { live: "", code: "https://github.com/Abhitkumar89/SnakeGame" },
   },
+  {
+    title: "LeetCode Progress Tracker",
+    description:
+      "Full-stack LeetCode progress tracker that syncs public profile stats (solved counts, streaks, heatmap) and adds personal notes, spaced revision, goals, and analytics in a clean dashboard.",
+    tags: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Axios",
+      "Recharts",
+      "Framer Motion",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "bcrypt",
+      "LeetCode GraphQL API",
+      "Rate Limiting",
+      "In-Memory Caching",
+    ],
+    accent: "pink",
+    featured: false,
+    links: {
+      live: "",
+      code: "https://github.com/Abhitkumar89/LeetCode-Progress-Tracker",
+    },
+  },
 ];
 
 export const experience = [
   {
     role: "Software Development Intern",
     company: "Amdocs",
-    period: "Jan — June 2026",
+    period: "Jan - June 2026",
     description: "Gurgaon, India",
     points: [
-      "Built an end-to-end hotfix packaging automation from scratch — Designed and implemented a Jenkins (Groovy) pipeline in Python that automates building customer-ready patch releases: pulls code changes from version control, locates the matching build artifacts, and assembles, validates, and packages them into a deployable archive — replacing a manual 2-3 hour process with a one-click build.",
-      "Integrated live enterprise data sources with production-grade safeguards — Connected the pipeline to live Perforce and four read-only SMB/CIFS network shares on a shared Linux agent, using openpyxl to parse release tracking Excel data, secure credential-file login, try/finally guaranteed unmounts to avoid stale mounts, and config driven paths — then tested and fixed real edge cases against actual release data.",
+      "Built an end-to-end hotfix packaging automation from scratch. Designed and implemented a Jenkins (Groovy) pipeline in Python that automates building customer-ready patch releases: pulls code changes from version control, locates the matching build artifacts, and assembles, validates, and packages them into a deployable archive, replacing a manual 2-3 hour process with a one-click build.",
+      "Integrated live enterprise data sources with production-grade safeguards. Connected the pipeline to live Perforce and four read-only SMB/CIFS network shares on a shared Linux agent, using openpyxl to parse release tracking Excel data, secure credential-file login, try/finally guaranteed unmounts to avoid stale mounts, and config driven paths, then tested and fixed real edge cases against actual release data.",
       "Eliminated manual CI status tracking by building an automated pipeline-monitoring and reporting system across 2- Jenkins pipelines that validates build states (Success/Failed/Unstable) and parses test logs via REST APIs, delivering real-time build status, live ETA for in-progress jobs, and scheduled daily reports to Microsoft Teams and Outlook."
     ],
     tags: [
@@ -225,7 +275,7 @@ export const socials = [
   { label: "Email", href: "mailto:krabhit910@gmail.com", icon: "mail" },
 ];
 
-// EmailJS configuration — sign up at https://www.emailjs.com and paste your
+// EmailJS configuration: sign up at https://www.emailjs.com and paste your
 // values here to make the contact form actually send emails.
 // Leave the placeholders to run the form in "demo" mode (shows success without sending).
 export const emailjsConfig = {

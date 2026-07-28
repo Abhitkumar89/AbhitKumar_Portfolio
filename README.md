@@ -4,7 +4,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=30&pause=1000&color=FB7185&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Abhit+Kumar+%F0%9F%91%8B;Front-End+Developer;Backend+Engineer;Software+Engineer;DevOps+Engineer" alt="Typing SVG" />
 </a>
 
-###  My interactive developer portfolio — built with React, Tailwind & Framer Motion 
+###  My interactive developer portfolio, built with React, Tailwind & Framer Motion 
 
 <p>
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white&style=for-the-badge" />
@@ -30,7 +30,7 @@
 <div align="center">
 
 <!-- Drop a screenshot or GIF here once deployed -->
-<i> Add a screenshot/GIF of the site here — e.g. <code>docs/preview.gif</code> — to make this pop!</i>
+<i> Add a screenshot/GIF of the site here (e.g. <code>docs/preview.gif</code>) to make this pop!</i>
 
 </div>
 
@@ -140,7 +140,7 @@ npm run lint         #  run eslint
 src/data/content.js   ←  edit name, roles, projects, skills, education, experience, links
 ```
 
-No need to touch the components — just update the data and the whole site follows.
+No need to touch the components. Just update the data and the whole site follows.
 
 </details>
 
