@@ -1,184 +1,101 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Download, Sparkles } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowDown, Download } from "lucide-react";
 import { profile } from "../data/content";
 import MagneticButton from "../components/MagneticButton";
+import HeroVisual from "../components/HeroVisual";
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
-};
-const item = {
-  hidden: { opacity: 0, y: 24 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
+function RotatingRole({ roles }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (!roles?.length) return undefined;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % roles.length);
+    }, 2400);
+    return () => clearInterval(id);
+  }, [roles]);
+
+  return (
+    <span className="relative mt-2 block h-[1.35em] overflow-hidden text-2xl font-medium text-white/85 sm:text-3xl">
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={roles[index]}
+          initial={{ y: "60%", opacity: 0 }}
+          animate={{ y: "0%", opacity: 1 }}
+          exit={{ y: "-60%", opacity: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="absolute inset-x-0 top-0"
+        >
+          {roles[index]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
 
 export default function Hero() {
   const scrollTo = (id) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-
-  // Cycle through the job titles for an animated, rotating headline.
-  const roles = profile.roles?.length ? profile.roles : [profile.role];
-  const [roleIndex, setRoleIndex] = useState(0);
-  useEffect(() => {
-    if (roles.length < 2) return;
-    const id = setInterval(
-      () => setRoleIndex((i) => (i + 1) % roles.length),
-      2600,
-    );
-    return () => clearInterval(id);
-  }, [roles.length]);
 
   return (
     <section
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28 max-w-full"
     >
-      {/* Floating gradient blobs */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-accent-violet/30 blur-3xl animate-float"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-16 bottom-16 h-80 w-80 rounded-full bg-accent-pink/20 blur-3xl animate-float"
-        style={{ animationDelay: "2s" }}
-      />
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+        <div className="max-w-xl">
+          <p className="mb-3 text-lg text-white/85 sm:text-xl">
+            Hi I&apos;m{" "}
+            <span className="font-semibold text-white">{profile.firstName}</span>
+          </p>
 
-      <div className="mx-auto max-w-6xl w-full px-6">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="relative z-10 grid w-full gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center"
-        >
-          <div>
-            <motion.span variants={item} className="chip mb-6 text-accent-cyan">
-              <Sparkles size={14} className="text-accent-amber" />
-              Available for new projects
-            </motion.span>
+          <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+            A developer dedicated to crafting
+          </p>
 
-            <motion.p
-              variants={item}
-              className="mb-3 font-mono text-sm text-accent-pink"
+          <h1 className="mt-1 font-display text-6xl font-bold leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl">
+            Bold
+          </h1>
+
+          <RotatingRole roles={profile.roles} />
+
+          <p className="mt-6 max-w-md text-base leading-relaxed text-slate-400">
+            {profile.intro}
+          </p>
+
+          <div className="mt-9 flex flex-wrap items-center gap-4">
+            <MagneticButton
+              onClick={() => scrollTo("projects")}
+              className="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
             >
-              Hi, my name is
-            </motion.p>
+              View my work
+              <ArrowDown
+                size={18}
+                className="transition-transform group-hover:translate-y-0.5"
+              />
+            </MagneticButton>
 
-            <motion.h1
-              variants={item}
-              className="font-display text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+            <MagneticButton
+              href={profile.resumeUrl}
+              download
+              strength={0.3}
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
             >
-              {profile.name}
-            </motion.h1>
-
-            <motion.h2
-              variants={item}
-              className="mt-2 flex min-h-[1.3em] items-center font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl"
-            >
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={roleIndex}
-                  initial={{ y: 22, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -22, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="text-gradient animate-gradient inline-block"
-                >
-                  {roles[roleIndex]}
-                </motion.span>
-              </AnimatePresence>
-            </motion.h2>
-
-            <motion.p
-              variants={item}
-              className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400"
-            >
-              {profile.intro}
-            </motion.p>
-
-            <motion.div
-              variants={item}
-              className="mt-9 flex flex-wrap items-center gap-4"
-            >
-              <MagneticButton
-                onClick={() => scrollTo("projects")}
-                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent-pink to-accent-violet px-7 py-3.5 font-semibold text-onaccent shadow-glow-pink"
-              >
-                View my work
-                <ArrowDown
-                  size={18}
-                  className="transition-transform group-hover:translate-y-0.5"
-                />
-              </MagneticButton>
-
-              <MagneticButton
-                href={profile.resumeUrl}
-                download
-                strength={0.3}
-                className="glass-2 inline-flex items-center gap-2 rounded-xl px-7 py-3.5 font-semibold text-white transition-colors hover:bg-white/10"
-              >
-                <Download size={18} /> Resume
-              </MagneticButton>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div variants={item} className="mt-12 flex flex-wrap gap-8">
-              {profile.stats.map((s) => (
-                <div key={s.label}>
-                  <div className="font-display text-3xl font-bold text-white">
-                    {s.value}
-                  </div>
-                  <div className="text-sm text-slate-500">{s.label}</div>
-                </div>
-              ))}
-            </motion.div>
+              <Download size={18} /> Resume
+            </MagneticButton>
           </div>
+        </div>
 
-          {/* Decorative animated avatar / code card */}
-          <motion.div
-            variants={item}
-            className="relative mx-auto hidden w-full max-w-sm md:block"
-          >
-            <div className="absolute inset-0 -z-10 animate-spin-slow rounded-[2rem] bg-gradient-to-tr from-accent-pink via-accent-violet to-accent-cyan opacity-40 blur-xl" />
-            <div className="glass rounded-[2rem] p-6 font-mono text-sm shadow-glow">
-              <div className="mb-4 flex gap-2">
-                <span className="h-3 w-3 rounded-full bg-accent-pink" />
-                <span className="h-3 w-3 rounded-full bg-accent-amber" />
-                <span className="h-3 w-3 rounded-full bg-accent-lime" />
-              </div>
-              <pre className="whitespace-pre-wrap leading-relaxed text-slate-300">
-                <span className="text-accent-violet">const</span>{" "}
-                <span className="text-accent-cyan">dev</span> = {"{"}
-                {"\n"} name:{" "}
-                <span className="text-accent-lime">'{profile.firstName}'</span>,
-                {"\n"} stack: [<span className="text-accent-lime">'React'</span>
-                , <span className="text-accent-lime">'Node'</span>],
-                {"\n"} loves:{" "}
-                <span className="text-accent-lime">'clean UI'</span>,{"\n"} tea:{" "}
-                <span className="text-accent-pink">true</span>,{"\n"}
-                {"}"};
-              </pre>
-            </div>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+          className="flex justify-center lg:justify-end"
+        >
+          <HeroVisual />
         </motion.div>
       </div>
-
-      {/* Scroll hint */}
-      <motion.button
-        onClick={() => scrollTo("about")}
-        aria-label="Scroll to about section"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-500 hover:text-white"
-      >
-        <ArrowDown size={22} className="animate-bounce" />
-      </motion.button>
     </section>
   );
 }

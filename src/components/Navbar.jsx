@@ -59,8 +59,8 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-6xl px-6">
       <nav
-        className={`rounded-2xl px-5 transition-all duration-300 ${
-          scrolled ? 'glass py-3 shadow-lg shadow-black/30' : 'bg-transparent py-2'
+        className={`rounded-2xl px-5 glass transition-all duration-300 ${
+          scrolled ? 'py-3' : 'py-2'
         }`}
       >
         <div className="relative flex items-center justify-between">
@@ -70,7 +70,7 @@ export default function Navbar() {
           onClick={(e) => go(e, 'home')}
           className="group flex items-center gap-2 font-display text-lg font-bold text-white"
         >
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-accent-pink to-accent-violet text-onaccent shadow-glow">
+          <span className="grid h-9 w-9 place-items-center rounded-xl border border-white/25 bg-white/5 text-sm font-bold text-white">
             {profile.firstName?.[0] ?? 'A'}
           </span>
           <span className="hidden sm:block">
@@ -86,12 +86,16 @@ export default function Navbar() {
               <a
                 href={`#${link.id}`}
                 onClick={(e) => go(e, link.id)}
-                className="relative rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-colors hover:text-white"
+                className={`relative rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                  active === link.id
+                    ? 'text-white'
+                    : 'text-slate-300 hover:text-white'
+                }`}
               >
                 {active === link.id && (
                   <motion.span
                     layoutId="nav-pill"
-                    className="absolute inset-0 -z-10 rounded-lg bg-white/10"
+                    className="absolute inset-0 -z-10 rounded-lg bg-white/15"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -107,7 +111,7 @@ export default function Navbar() {
           <a
             href={profile.resumeUrl}
             download
-            className="hidden items-center gap-2 rounded-xl bg-gradient-to-r from-accent-pink to-accent-violet px-4 py-2 text-sm font-semibold text-onaccent shadow-glow-pink transition-transform hover:scale-105 sm:flex"
+            className="hidden items-center gap-2 rounded-xl border border-white/25 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10 sm:flex"
           >
             <Download size={16} /> Resume
           </a>
@@ -157,7 +161,7 @@ export default function Navbar() {
                   href={profile.resumeUrl}
                   download
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-pink to-accent-violet px-4 py-3 font-semibold text-onaccent"
+                  className="flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/5 px-4 py-3 font-semibold text-white transition-colors hover:bg-white/10"
                 >
                   <Download size={18} /> Download Resume
                 </a>

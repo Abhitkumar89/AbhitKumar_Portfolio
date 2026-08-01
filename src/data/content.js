@@ -9,10 +9,10 @@ export const profile = {
   firstName: "Abhit",
   // Rotating job titles animated in the hero.
   roles: [
-    "Front-End Developer",
-    "Backend Engineer",
     "Software Engineer",
-    "DevOps Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Engineer",
   ],
   tagline: "I build bold, fast, and delightful web experiences.",
   location: "Delhi, India",
@@ -145,6 +145,7 @@ export const projects = [
     tags: ["React", "Node.js", "MongoDB", "AI"],
     accent: "violet",
     featured: true,
+    image: "/projects/fastblog.svg",
     links: { live: "https://fast-blog-gray.vercel.app/", code: "https://github.com/Abhitkumar89/FastBlog" },
   },
   {
@@ -162,6 +163,7 @@ export const projects = [
     ],
     accent: "violet",
     featured: true,
+    image: "/projects/sorting.svg",
     links: {
       live: "https://sorting-visualizer-sand-eta.vercel.app/",
       code: "https://github.com/Abhitkumar89/Sorting_Visualizer",
@@ -174,6 +176,7 @@ export const projects = [
     tags: ["React", "Node.js", "Express", "MongoDB"],
     accent: "pink",
     featured: false,
+    image: "/projects/studynotion.svg",
     links: { live: "https://study-notion-frontend-sigma-five.vercel.app/", code: "https://github.com/Abhitkumar89/Study-Notion" },
   },
   {
@@ -183,6 +186,7 @@ export const projects = [
     tags: ["React", "Node.js", "Socket.IO", "JWT"],
     accent: "cyan",
     featured: false,
+    image: "/projects/moveon.svg",
     links: { live: "", code: "https://github.com/Abhitkumar89/MoveOn" },
   },
   {
@@ -192,6 +196,7 @@ export const projects = [
     tags: ["React", "JavaScript", "Tailwind CSS"],
     accent: "amber",
     featured: false,
+    image: "/projects/password.svg",
     links: { live: "", code: "https://github.com/Abhitkumar89/PassWordGenerator" },
   },
   {
@@ -201,6 +206,7 @@ export const projects = [
     tags: ["Python", "TensorFlow", "Flask", "OpenCV", "VGG16", "LSTM"],
     accent: "lime",
     featured: false,
+    image: "/projects/ra-detect.svg",
     links: { live: "", code: "https://github.com/Abhitkumar89" },
   },
   {
@@ -210,6 +216,7 @@ export const projects = [
     tags: ["JavaScript", "HTML5", "CSS3"],
     accent: "cyan",
     featured: false,
+    image: "/projects/snake.svg",
     links: { live: "", code: "https://github.com/Abhitkumar89/SnakeGame" },
   },
   {
@@ -237,6 +244,7 @@ export const projects = [
     ],
     accent: "pink",
     featured: false,
+    image: "/projects/leetcode.svg",
     links: {
       live: "",
       code: "https://github.com/Abhitkumar89/LeetCode-Progress-Tracker",

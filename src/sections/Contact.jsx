@@ -47,11 +47,7 @@ export default function Contact() {
 
   return (
     <SectionWrapper id="contact">
-      <SectionHeading
-        eyebrow="06 / Contact"
-        title="Let's build something"
-        align="center"
-      />
+      <SectionHeading title="Let's build something" align="center" />
 
       <div className="mx-auto grid max-w-4xl gap-10 md:grid-cols-[0.9fr_1.1fr]">
         {/* Left: blurb + socials */}

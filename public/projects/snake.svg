@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#022c22"/>
+  <rect x="180" y="60" width="600" height="440" rx="16" fill="#064e3b"/>
+  <g fill="#14532d">
+    <rect x="200" y="80" width="40" height="40"/><rect x="240" y="80" width="40" height="40"/><rect x="280" y="80" width="40" height="40"/>
+    <rect x="200" y="120" width="40" height="40"/><rect x="280" y="120" width="40" height="40"/>
+    <rect x="200" y="160" width="40" height="40"/><rect x="240" y="160" width="40" height="40"/><rect x="280" y="160" width="40" height="40"/>
+  </g>
+  <rect x="320" y="200" width="40" height="40" fill="#22c55e"/>
+  <rect x="360" y="200" width="40" height="40" fill="#4ade80"/>
+  <rect x="400" y="200" width="40" height="40" fill="#4ade80"/>
+  <rect x="400" y="240" width="40" height="40" fill="#4ade80"/>
+  <rect x="400" y="280" width="40" height="40" fill="#4ade80"/>
+  <rect x="440" y="280" width="40" height="40" fill="#4ade80"/>
+  <rect x="480" y="280" width="40" height="40" fill="#4ade80"/>
+  <circle cx="560" cy="300" r="14" fill="#ef4444"/>
+  <rect x="180" y="520" width="160" height="28" rx="8" fill="#14532d"/>
+  <text x="200" y="540" fill="#bbf7d0" font-family="Segoe UI,sans-serif" font-size="16">Score: 24</text>
+  <text x="180" y="580" fill="#86efac" font-family="Segoe UI,sans-serif" font-size="18">Snake Game — classic arcade grid</text>
+</svg>

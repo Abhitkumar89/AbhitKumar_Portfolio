@@ -1,0 +1,38 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#0c0a09"/>
+  <rect x="30" y="30" width="280" height="160" rx="16" fill="#1c1917"/>
+  <rect x="50" y="50" width="120" height="16" rx="3" fill="#fb923c"/>
+  <text x="50" y="120" fill="#fff7ed" font-family="Segoe UI,sans-serif" font-size="42" font-weight="700">342</text>
+  <rect x="50" y="140" width="100" height="12" rx="3" fill="#78716c"/>
+  <rect x="330" y="30" width="280" height="160" rx="16" fill="#1c1917"/>
+  <rect x="350" y="50" width="140" height="16" rx="3" fill="#34d399"/>
+  <rect x="350" y="100" width="180" height="14" rx="3" fill="#44403c"/>
+  <rect x="350" y="100" width="120" height="14" rx="3" fill="#f97316"/>
+  <rect x="350" y="130" width="180" height="14" rx="3" fill="#44403c"/>
+  <rect x="350" y="130" width="80" height="14" rx="3" fill="#22c55e"/>
+  <rect x="630" y="30" width="300" height="160" rx="16" fill="#1c1917"/>
+  <rect x="650" y="50" width="120" height="16" rx="3" fill="#38bdf8"/>
+  <circle cx="780" cy="120" r="40" fill="none" stroke="#f97316" stroke-width="10"/>
+  <circle cx="780" cy="120" r="40" fill="none" stroke="#44403c" stroke-width="10" stroke-dasharray="80 180"/>
+  <rect x="30" y="220" width="900" height="280" rx="16" fill="#1c1917"/>
+  <g>
+    <rect x="60" y="260" width="18" height="18" fill="#292524"/><rect x="86" y="260" width="18" height="18" fill="#f97316"/>
+    <rect x="112" y="260" width="18" height="18" fill="#ea580c"/><rect x="138" y="260" width="18" height="18" fill="#292524"/>
+    <rect x="164" y="260" width="18" height="18" fill="#fb923c"/><rect x="190" y="260" width="18" height="18" fill="#292524"/>
+    <rect x="60" y="286" width="18" height="18" fill="#ea580c"/><rect x="86" y="286" width="18" height="18" fill="#292524"/>
+    <rect x="112" y="286" width="18" height="18" fill="#f97316"/><rect x="138" y="286" width="18" height="18" fill="#fb923c"/>
+    <rect x="164" y="286" width="18" height="18" fill="#292524"/><rect x="190" y="286" width="18" height="18" fill="#ea580c"/>
+    <rect x="60" y="312" width="18" height="18" fill="#292524"/><rect x="86" y="312" width="18" height="18" fill="#fb923c"/>
+    <rect x="112" y="312" width="18" height="18" fill="#292524"/><rect x="138" y="312" width="18" height="18" fill="#f97316"/>
+  </g>
+  <rect x="420" y="260" width="480" height="200" rx="12" fill="#0c0a09"/>
+  <rect x="450" y="400" width="30" height="40" fill="#f97316"/>
+  <rect x="500" y="360" width="30" height="80" fill="#fb923c"/>
+  <rect x="550" y="320" width="30" height="120" fill="#f97316"/>
+  <rect x="600" y="340" width="30" height="100" fill="#ea580c"/>
+  <rect x="650" y="300" width="30" height="140" fill="#fb923c"/>
+  <rect x="700" y="280" width="30" height="160" fill="#f97316"/>
+  <rect x="750" y="310" width="30" height="130" fill="#ea580c"/>
+  <rect x="800" y="270" width="30" height="170" fill="#fb923c"/>
+  <text x="30" y="550" fill="#a8a29e" font-family="Segoe UI,sans-serif" font-size="18">LeetCode Tracker — streaks, goals, analytics</text>
+</svg>

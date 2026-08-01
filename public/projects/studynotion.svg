@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#0a0a0a"/>
+  <rect width="220" height="600" fill="#111"/>
+  <rect x="24" y="28" width="120" height="18" rx="4" fill="#fbbf24"/>
+  <rect x="24" y="80" width="170" height="36" rx="8" fill="#1f1f1f"/>
+  <rect x="24" y="130" width="170" height="36" rx="8" fill="#f97316"/>
+  <rect x="24" y="180" width="170" height="36" rx="8" fill="#1f1f1f"/>
+  <rect x="24" y="230" width="170" height="36" rx="8" fill="#1f1f1f"/>
+  <rect x="250" y="30" width="280" height="28" rx="8" fill="#1f1f1f"/>
+  <rect x="250" y="90" width="320" height="40" rx="8" fill="#e2e8f0"/>
+  <rect x="250" y="150" width="200" height="14" rx="3" fill="#64748b"/>
+  <rect x="250" y="200" width="210" height="160" rx="14" fill="#1a1a1a"/>
+  <rect x="250" y="200" width="210" height="90" fill="#7c2d12"/>
+  <rect x="480" y="200" width="210" height="160" rx="14" fill="#1a1a1a"/>
+  <rect x="480" y="200" width="210" height="90" fill="#1d4ed8"/>
+  <rect x="710" y="200" width="210" height="160" rx="14" fill="#1a1a1a"/>
+  <rect x="710" y="200" width="210" height="90" fill="#047857"/>
+  <rect x="250" y="390" width="670" height="140" rx="14" fill="#141414"/>
+  <rect x="270" y="420" width="300" height="16" rx="4" fill="#e2e8f0"/>
+  <rect x="270" y="450" width="500" height="10" rx="3" fill="#525252"/>
+  <rect x="270" y="480" width="420" height="10" rx="3" fill="#404040"/>
+  <text x="250" y="575" fill="#a3a3a3" font-family="Segoe UI,sans-serif" font-size="18">StudyNotion — EdTech courses dashboard</text>
+</svg>

@@ -7,7 +7,7 @@ import { experience } from '../data/content';
 export default function Experience() {
   return (
     <SectionWrapper id="experience">
-      <SectionHeading eyebrow="02 / Journey" title="Where I've worked" />
+      <SectionHeading title="Where I've worked" />
 
       <Timeline
         items={experience}

@@ -1,15 +1,10 @@
 import { motion } from 'framer-motion';
 
-// Consistent eyebrow + title block for each section.
-export default function SectionHeading({ eyebrow, title, align = 'left' }) {
+// Consistent title block for each section.
+export default function SectionHeading({ title, align = 'left' }) {
   const alignment = align === 'center' ? 'items-center text-center' : 'items-start text-left';
   return (
     <div className={`mb-12 flex flex-col gap-3 ${alignment}`}>
-      {eyebrow && (
-        <span className="chip font-mono text-xs uppercase tracking-[0.2em] text-accent-pink">
-          {eyebrow}
-        </span>
-      )}
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}

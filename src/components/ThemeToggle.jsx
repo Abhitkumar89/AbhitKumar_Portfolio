@@ -21,6 +21,8 @@ export default function ThemeToggle({ className = '' }) {
     } catch {
       // ignore storage failures (e.g. private mode)
     }
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0a0e14' : '#fb923c');
   }, [theme]);
 
   const isDark = theme === 'dark';
@@ -29,8 +31,8 @@ export default function ThemeToggle({ className = '' }) {
     <button
       type="button"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
-      title={isDark ? 'Light mode' : 'Dark mode'}
+      aria-label={isDark ? "Switch to morning theme" : "Switch to night theme"}
+      title={isDark ? "Morning" : "Night"}
       className={`relative grid h-10 w-10 place-items-center overflow-hidden rounded-xl glass text-accent-amber transition-colors hover:text-accent-pink ${className}`}
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -39,7 +41,7 @@ export default function ThemeToggle({ className = '' }) {
           initial={{ y: -18, opacity: 0, rotate: -90 }}
           animate={{ y: 0, opacity: 1, rotate: 0 }}
           exit={{ y: 18, opacity: 0, rotate: 90 }}
-          transition={{ duration: 0.25, ease: 'easeOut' }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
           className="grid place-items-center"
         >
           {isDark ? <Moon size={18} /> : <Sun size={18} />}

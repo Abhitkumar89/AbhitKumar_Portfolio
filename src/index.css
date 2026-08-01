@@ -5,32 +5,40 @@
 @tailwind utilities;
 
 @layer base {
+
   /* Light theme (default). Values are space-separated RGB channels so they
      can be consumed by Tailwind via rgb(var(--x) / <alpha-value>). */
   :root {
-    --c-base: 232 233 238; /* soft, calm cloud-gray (not stark white) */
-    --c-surface: 240 241 245; /* elevated surface */
-    --c-card: 243 244 248; /* card background */
-    --c-fg: 30 35 48; /* soft charcoal, not pure black */
-    --c-fg-muted: 84 92 107; /* secondary text */
-    --c-fg-faint: 124 132 146; /* tertiary text */
-    --c-grid: 30 35 48; /* decorative grid lines */
-    --glass-bg: rgba(255, 255, 255, 0.45);
-    --glass-bg-2: rgba(255, 255, 255, 0.32);
-    --glass-border: rgba(255, 255, 255, 0.65);
-    --glass-highlight: rgba(255, 255, 255, 0.85);
-    --glass-shadow: 0 10px 30px -12px rgba(30, 35, 70, 0.2);
+    /* Calm morning / sunrise theme */
+    --c-base: 255 248 242; /* soft cream */
+    --c-surface: 255 243 234; /* warm surface */
+    --c-card: 255 250 246; /* card */
+    --c-fg: 48 44 40; /* soft charcoal (not brown) */
+    --c-fg-muted: 90 82 74; /* calm muted */
+    --c-fg-faint: 130 118 108; /* soft stone */
+    --c-grid: 180 140 110;
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-bg-2: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.55);
+    --glass-highlight: rgba(255, 255, 255, 0.8);
+    --glass-shadow: 0 10px 30px -12px rgba(80, 60, 40, 0.12);
     color-scheme: light;
   }
 
   /* Dark theme */
   .dark {
-    --c-base: 10 14 20; /* #0a0e14 */
-    --c-surface: 17 23 31; /* #11171f */
-    --c-card: 22 28 38; /* #161c26 */
-    --c-fg: 237 240 244; /* near white */
-    --c-fg-muted: 148 163 184; /* slate-400 */
-    --c-fg-faint: 100 116 139; /* slate-500 */
+    --c-base: 10 14 20;
+    /* #0a0e14 */
+    --c-surface: 17 23 31;
+    /* #11171f */
+    --c-card: 22 28 38;
+    /* #161c26 */
+    --c-fg: 237 240 244;
+    /* near white */
+    --c-fg-muted: 148 163 184;
+    /* slate-400 */
+    --c-fg-faint: 100 116 139;
+    /* slate-500 */
     --c-grid: 255 255 255;
     --glass-bg: rgba(255, 255, 255, 0.06);
     --glass-bg-2: rgba(255, 255, 255, 0.035);
@@ -47,7 +55,7 @@
   body {
     @apply bg-ink text-slate-200 font-sans antialiased;
     overflow-x: hidden;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.45s ease, color 0.45s ease;
   }
 
   ::selection {
@@ -57,13 +65,16 @@
   ::-webkit-scrollbar {
     width: 10px;
   }
+
   ::-webkit-scrollbar-track {
     background: rgb(var(--c-base));
   }
+
   ::-webkit-scrollbar-thumb {
     @apply bg-accent-violet/40 rounded-full;
     border: 2px solid rgb(var(--c-base));
   }
+
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-accent-violet/70;
   }
@@ -80,6 +91,7 @@
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow), inset 0 1px 0 0 var(--glass-highlight);
+    transition: background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
     @apply backdrop-blur-xl;
   }
 
@@ -87,6 +99,7 @@
   .glass-2 {
     background: var(--glass-bg-2);
     border: 1px solid var(--glass-border);
+    transition: background-color 0.45s ease, border-color 0.45s ease;
     @apply backdrop-blur-md;
   }
 
@@ -115,38 +128,35 @@
   border-radius: 9999px;
   filter: blur(56px);
   opacity: 0.9;
-  background: radial-gradient(
-    circle at center,
-    rgba(251, 113, 133, 0.22),
-    rgba(45, 212, 191, 0.16) 38%,
-    rgba(56, 189, 248, 0.12) 60%,
-    transparent 72%
-  );
+  background: radial-gradient(circle at center,
+      rgba(251, 113, 133, 0.22),
+      rgba(45, 212, 191, 0.16) 38%,
+      rgba(56, 189, 248, 0.12) 60%,
+      transparent 72%);
 }
+
 .dark .cursor-glow {
   opacity: 0.4;
 }
 
 /* Dashed lane markings for the "road" the cars drive on. */
 .road-lane-h {
-  background: repeating-linear-gradient(
-    to right,
-    rgba(251, 191, 36, 0.85) 0 10px,
-    transparent 10px 22px
-  );
+  background: repeating-linear-gradient(to right,
+      rgba(251, 191, 36, 0.85) 0 10px,
+      transparent 10px 22px);
 }
+
 .road-lane-v {
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(251, 191, 36, 0.85) 0 10px,
-    transparent 10px 22px
-  );
+  background: repeating-linear-gradient(to bottom,
+      rgba(251, 191, 36, 0.85) 0 10px,
+      transparent 10px 22px);
 }
 
 
 
 /* Respect reduced motion globally */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

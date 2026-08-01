@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#052e16"/>
+  <rect x="40" y="40" width="520" height="420" rx="18" fill="#064e3b"/>
+  <rect x="80" y="80" width="440" height="340" rx="12" fill="#022c22"/>
+  <circle cx="260" cy="230" r="70" fill="none" stroke="#34d399" stroke-width="4"/>
+  <circle cx="340" cy="270" r="45" fill="none" stroke="#a3e635" stroke-width="3"/>
+  <path d="M160 320 C220 280 300 360 380 300 C430 270 470 310 500 290" fill="none" stroke="#6ee7b7" stroke-width="3"/>
+  <rect x="590" y="40" width="330" height="420" rx="18" fill="#0b1f17"/>
+  <rect x="620" y="70" width="200" height="20" rx="4" fill="#ecfdf5"/>
+  <rect x="620" y="120" width="270" height="50" rx="10" fill="#14532d"/>
+  <rect x="640" y="138" width="140" height="14" rx="3" fill="#86efac"/>
+  <rect x="620" y="200" width="270" height="14" rx="3" fill="#166534"/>
+  <rect x="620" y="230" width="220" height="14" rx="3" fill="#166534"/>
+  <rect x="620" y="280" width="270" height="90" rx="12" fill="#052e16"/>
+  <text x="640" y="335" fill="#86efac" font-family="Segoe UI,sans-serif" font-size="22">Stage 2 / 5</text>
+  <rect x="620" y="400" width="180" height="36" rx="10" fill="#34d399"/>
+  <text x="40" y="520" fill="#a7f3d0" font-family="Segoe UI,sans-serif" font-size="18">RA Detection — CNN medical imaging</text>
+</svg>
