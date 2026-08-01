@@ -69,7 +69,7 @@ export default {
           '50%': { opacity: '1' },
         },
         spinSlow: {
-          to: { transform: 'rotate(360deg)' },
+          to:{transform: 'rotate(360deg)'},
         },
       },
       animation: {
